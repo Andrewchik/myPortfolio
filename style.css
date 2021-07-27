@@ -15,7 +15,7 @@ a{
 }
 .main-menu{
     width: 14rem;
-    background-color: #181818;
+    background-color: #151414;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -160,6 +160,8 @@ align-items: center;
   
 }
 
+
+
 .contact-btn{
     border: 1px solid #08fdd8;
     color: #08fdd8;
@@ -297,6 +299,8 @@ align-items: center;
 
 .sound-state{
     cursor: pointer;
+    font-weight: 900;
+    font-family: system-ui;
 
 }
 

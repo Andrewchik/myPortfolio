@@ -12,8 +12,8 @@
     <div id="sound" class="activated"> 
         <i class="fab fa-soundcloud"></i>
               <a href="#" class="sound-state" 
-              :class="state !== 'OFF' ? 'music-off' : 'music-on'"
-              @click = ''
+              :class="state == ' OFF' ? 'music-off' : 'music-on'"
+              @click = 'changeState'
               >Sound {{ state }}</a>
     </div>
     <menu class="main-menu">
