@@ -1,15 +1,37 @@
-const menuBtn = document.getElementById('menu')
-const elements = document.getElementsByClassName('elements')[0]
+const t = [
+    "Front End Developer"
+]
 
 
-menuBtn.addEventListener('click', menuOn)
 
-function menuOn() {
-    menuBtn.classList.toggle('active')
+function typeText() {
+    let line = 0
+    let count = 0
+    let out = ''
+    let htmlOut = document.querySelector('.text-writer')
 
-    if (menuBtn.classList.contains('active')) {
-        elements.style.display = 'flex'
-    }else{
-        elements.style.display = 'none'
+    function typeLine() {
+        // Малюэмо строку
+        let interval = setTimeout(()=>{
+            out += t[line][count]
+            htmlOut.innerHTML = out + '|'
+            count++
+
+            // Перевірки
+            if (count >= t[line].length) {
+                count = 0
+                line++
+                if (line==t.length) {
+                    clearTimeout(interval);
+                    htmlOut.innerHTML = out // Убираем палку |
+                    return true
+                }
+            }
+            typeLine()
+        } , 200)
     }
+    typeLine()
+
 }
+
+typeText()
