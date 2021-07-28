@@ -1,3 +1,4 @@
+let audio = new Audio('sound/Nice To Meet Ya - Wes Nelson.mp3')
 const App = {
     data() {
         return {
@@ -6,20 +7,22 @@ const App = {
             
         }
     },
+    
     methods: {
         
         changeState(e) {
-         
             e.preventDefault()
-            this.state = ' ON'
-            let audio = new Audio('sound/Nice To Meet Ya - Wes Nelson.mp3')
-            if (this.playing) {
+           
+            if (this.playing == true) {
+                this.playing = false
+                this.state = ' OFF'
                 audio.pause();
-              
                 
-            }else{
-                audio.play();
+            }else if(this.playing == false){
+                this.state = ' ON'
                 this.playing = true
+                 audio.play();
+                 audio.volume = 0.3;
             }
            
            

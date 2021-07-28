@@ -115,6 +115,7 @@ align-items: center;
 }
 
 #section-home{
+    position: relative;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -310,4 +311,80 @@ align-items: center;
 
 .music-on{
     color: green;
+}
+
+.section-work {
+    font-family: "Open Sans",sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+
+.section-work .my-portfolio_content {
+   display: flex;
+   align-items: flex-end;
+}
+
+
+
+.section-work .text-zone p {
+    font-family: "Open Sans",sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 15px;
+    width: 75%;
+}
+
+.flat-button{
+    color: #08fdd8;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-family: "Open Sans",sans-serif;
+    text-decoration: none;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    border: 1px solid #08fdd8;
+    margin: 20px;
+}
+
+
+
+.text-zone h2{
+    font-weight: 400;
+    font-size: 4vw;
+    position: relative;
+}
+
+@media (max-width: 1160px){
+    .section-work{
+        margin: 0;
+    }
+}
+
+@media (max-width: 910px){
+    .section-work .my-portfolio_content{
+        display: block;
+    }
+
+    .section-work .text-zone h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .section-work .text-zone p{
+        width: 100%;
+    }
+
+    .flat-button{
+        margin: 0 auto;
+    }
+
+    .section-work .text-zone{
+        padding-left: 1rem;
+    }
 }
