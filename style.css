@@ -228,6 +228,8 @@ align-items: center;
 }
 
 .scroll-down{
+    visibility: visible;
+    opacity: 1;
     position: absolute;
     right: 10px;
     bottom: 3rem;
@@ -244,7 +246,10 @@ align-items: center;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
+.scroll-down.active{
+    visibility: hidden;
+    opacity: 0;
+}
 @keyframes scrollDown {
     0%{
         transform: translateY(15px);
@@ -262,7 +267,7 @@ align-items: center;
         justify-content: center;
     }
     .text-zone p{
-        text-align: center;
+        text-align: start;
         margin-bottom: 20px;
 
     }
@@ -313,6 +318,12 @@ align-items: center;
     color: green;
 }
 
+.section-full{
+    min-height: 60vh;
+    margin-left: 170px;
+    opacity: 1;
+}
+
 .section-work {
     font-family: "Open Sans",sans-serif;
     background-color: #181818;
@@ -328,7 +339,7 @@ align-items: center;
 
 .section-work .text-zone p {
     font-family: "Open Sans",sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #fff;
     padding: 15px;
     width: 75%;
@@ -349,7 +360,7 @@ align-items: center;
     display: block;
     text-align: center;
     border: 1px solid #08fdd8;
-    margin: 20px;
+    
 }
 
 
@@ -358,6 +369,7 @@ align-items: center;
     font-weight: 400;
     font-size: 4vw;
     position: relative;
+    color: #08fdd8;
 }
 
 @media (max-width: 1160px){
@@ -372,7 +384,7 @@ align-items: center;
     }
 
     .section-work .text-zone h2{
-        font-size: 3rem;
+        font-size: 2.9rem;
         text-align: center;
     }
 
@@ -385,6 +397,65 @@ align-items: center;
     }
 
     .section-work .text-zone{
+        padding-left: 1rem;
+    }
+}
+
+
+.section-about {
+    font-family: "Open Sans",sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+
+
+.section-work .my-portfolio_content a {
+    color: #08fdd8;
+}
+
+
+.section-about .text-zone p {
+    font-family: "Open Sans",sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 5px;
+    width: 45%;
+    margin-top: 1rem;
+}
+
+
+
+
+.text-zone h2{
+    font-weight: 400;
+    font-size: 4vw;
+    position: relative;
+    color: #08fdd8;
+}
+
+@media (max-width: 1160px){
+    .section-about{
+        margin: 0;
+    }
+}
+
+@media (max-width: 910px){
+    .section-about .my-portfolio_content{
+        display: block;
+    }
+
+    .section-about .text-zone h2{
+        font-size: 2.9rem;
+        text-align: center;
+    }
+
+    .section-about .text-zone p{
+        width: 100%;
+    }
+
+   
+
+    .section-about .text-zone{
         padding-left: 1rem;
     }
 }

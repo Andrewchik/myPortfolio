@@ -5,9 +5,28 @@ const t = [
 const t2 = [
     "A small gallery of recent projects chosen by me. ",
     " It's only a drop in the ocean compared to the entire list.",
-    "Interested to see some more? Visit my work page."
+    " Interested to see some more? Visit my work page."
 ]
 
+
+/**
+   * Easy selector helper function
+   */
+ const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+  /**
+   * Easy on scroll event listener 
+   */
+   const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener)
+  }
 
 
 function typeText() {
@@ -73,3 +92,16 @@ function typeText2() {
 }
 
 typeText2()
+
+let backtotop = select('.scroll-down')
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add('active')
+      } else {
+        backtotop.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
