@@ -401,11 +401,94 @@ align-items: center;
     }
 }
 
+.my-work{
+    margin-left: 221px;
+    background-color: #181818;
+}
+
+.my-work ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-work ul li{
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+}
+
+.my-work_item:nth-child(2){
+    min-height: 210px;
+    background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/Bez-nazwy-3-e1508357920340.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.my-work_item:nth-child(-n+3){
+    min-height: 210px;
+    background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/11/ttelo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.my-work_item:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 1160px){
+    .my-work{
+        margin-left: 0px;
+    }
+
+    .my-work_item{
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 900px){
+    .my-work ul li{
+        width: 33%;
+    }
+
+    .my-work ul{
+        justify-content: center;
+    }
+    .my-work ul li:last-child{
+        display: none;
+        visibility: hidden;
+    }
+
+    .my-work_item{
+        max-height: 240px;
+    }
+}
+
+@media (min-width: 590px){
+    .section-full{
+        min-height: 40vh;
+    }
+  
+}
+
+@media (max-width: 555px){
+    .my-work ul li {
+        width: 50%;
+    }
+
+    .my-work ul li:last-child{
+        display: block;
+        visibility: visible;
+    }
+}
+
 
 .section-about {
     font-family: "Open Sans",sans-serif;
     background-color: #181818;
     color: #fff;
+    padding-bottom: 40px;
 }
 
 
@@ -427,6 +510,7 @@ align-items: center;
 
 
 .text-zone h2{
+    padding-top: 45px;
     font-weight: 400;
     font-size: 4vw;
     position: relative;
