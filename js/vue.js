@@ -34,9 +34,6 @@ const App = {
         
     },
 
-    computed: {
-        
-    }
     
     
 }

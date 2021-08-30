@@ -105,3 +105,18 @@ let backtotop = select('.scroll-down')
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+
+
+  const mobileMenu  = document.querySelector('.mobile-munu')
+  const mobileMenuItems  = document.querySelector('.mobile-munu_items')
+ 
+  mobileMenu.addEventListener('click', menuMoveing)
+  
+   function menuMoveing() {
+    mobileMenu.classList.toggle('active')
+    if (mobileMenu.classList.contains('active')) {
+      mobileMenuItems.style.display = 'flex'
+    }else{
+      mobileMenuItems.style.display = 'none'
+    }
+   }

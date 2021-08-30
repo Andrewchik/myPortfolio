@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+<body>
+    <div id="sound" class="activated"> 
+        <i class="fab fa-soundcloud"></i>
+              <a href="" class="sound-state" 
+              :class="state == ' OFF' ? 'music-off' : 'music-on'"
+              @click = 'changeState'
+              >Sound {{ state }}</a>
+    </div>
+    <menu id="menu" class="main-menu">
+        <div class="main-menu__top">
+            <a href="index.html" class="logo">
+                <img src="img/pngwing.com.svg" alt="logo">
+                <span>Android</span>
+            </a>
+            <span class="under-title">Web Developer</span>
+        </div>
+        <div class="main-menu__nav">
+            <a href="/about">About</a>    
+            <a href="/myskills">My Skills</a>
+            <a href="/work">Work</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="main-menu__social">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        
+    </menu>
+    <section id="about" data-load="work" class="section-full section-about js-way" >
+        <div class="text-zone">
+            
+                
+                    <h2 aria-label="My Portfolio" class="blast-root"><span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">,</span> <span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">y</span><span class="blind" aria-hidden="true" style="opacity: 1;">s</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">l</span><span class="blind" aria-hidden="true" style="opacity: 1;">f</span> <span class="blind" aria-hidden="true" style="opacity: 1;">a</span><span class="blind" aria-hidden="true" style="opacity: 1;">n</span><span class="blind" aria-hidden="true" style="opacity: 1;">d</span> <span class="blind" aria-hidden="true" style="opacity: 1;">I</span></h2>
+                <div class="my-portfolio_content">
+                <p class="text">I’m a Front-End Developer located in Poland. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
+                <p class="text">Well-organised person, problem solver, independent employee with high attention to detail. Fan of MMA, outdoor activities, TV series and English literature. A family person and father of two fractious boys,</p>
+                <p class="text">Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+                <a href="https://jacekjeznach.com/contact/" style="color: #0bd2b4;font-weight: 700;padding: 5px;">Let’s make something special.</a>
+                </div>
+
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/vue.js"></script>
+    
+</body>
+</html>

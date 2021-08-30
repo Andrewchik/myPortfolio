@@ -37,6 +37,10 @@ a{
     display: flex;
     flex-direction: column;
 }
+
+.mobile-munu{
+    display: none;
+}
 .logo{
     display: flex;
     flex-direction: column;
@@ -93,12 +97,25 @@ align-items: center;
 }
 
 
+
+
 @media (max-width: 1160px) {
     .main-menu{
         display: none;
     }
 
+    .mobile-munu{
+        display: block;
+        position: absolute;
+        color: #fff;
+        z-index: 9999;
+
+        
+    }
+
+
     #section-home{
+        position: relative;
         margin: 0;
     }
 
@@ -113,6 +130,28 @@ align-items: center;
     }
    
 }
+
+.mobile-munu_icon{
+    font-size: 50px;
+}
+
+.mobile-munu_items{
+   display: none;
+}
+
+.mobile-munu_items.active{
+    display: flex;
+    font-size: 40px;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.mobile-munu_items a{
+    color: #fff;
+}
+
+
 
 #section-home{
     position: relative;
@@ -137,6 +176,13 @@ align-items: center;
     font-weight: 400;
     font-size: 10vw;
     position: relative;
+}
+
+
+@media (max-width: 1160px){
+    .text-zone h1{
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px){
@@ -434,7 +480,7 @@ align-items: center;
 
 .my-work_item:nth-child(-n+3){
     min-height: 210px;
-    background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/11/ttelo.png);
+    background-image: url(../img/my-works/sokhan.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preloader.css">
     <script src="https://kit.fontawesome.com/060703f24d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="preloader">
+        <div class="container">
+        <img class="loading-img" src="img/pngwing.com.svg" alt="logo">
+            <p>Andrew is thinking</p>
+            <span class="line"><span class="into-line"></span></span>
+        </div>
+    </div>
     <div id="sound" class="activated"> 
         <i class="fab fa-soundcloud"></i>
               <a href="" class="sound-state" 
@@ -16,7 +24,7 @@
               @click = 'changeState'
               >Sound {{ state }}</a>
     </div>
-    <menu class="main-menu">
+    <menu id="menu" class="main-menu">
         <div class="main-menu__top">
             <a href="#" class="logo">
                 <img src="img/pngwing.com.svg" alt="logo">
@@ -25,13 +33,12 @@
             <span class="under-title">Web Developer</span>
         </div>
         <div class="main-menu__nav">
-            <a href="#about">About</a>
-            <a href="#myskills">My Skills</a>
-            <a href="#work">Work</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+            <a href="about.html">About</a>    
+            <a href="/myskills">My Skills</a>
+            <a href="/work">Work</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
         </div>
-        
         <div class="main-menu__social">
             <ul>
                 <li></li>
@@ -42,7 +49,17 @@
         </div>
         
     </menu>
-    
+    <div class="mobile-munu">
+        <span class="mobile-munu_icon">&#10150;</span>
+        <div class="mobile-munu_items">
+            <a href="/about">About</a>    
+            <a href="/myskills">My Skills</a>
+            <a href="/work">Work</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </div>
+     
+    </div>
   
 
     <div id="axatifi">
@@ -85,15 +102,15 @@
 
     <section id="my-work" class="my-work">
         <ul>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/Bez-nazwy-3-e1508357920340.jpg)">
-                   <a href="https://benicostatour.com/"></a>
+            <li><a href="https://benicostatour.com/">
+                <div class="my-work_item" style="background-image: url(./img/my-works/benicosta.jpg)">
+                   
                 </div>
+            </a>
             </li>
-            <li>
-                <div class="my-work_item">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
+            <li><a href="https://drsokhan.club/">
+                <div class="my-work_item"></div>
+            </a>
             </li>
             <li>
                 <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/3.jpg);">
@@ -186,7 +203,7 @@
                         </li>
                         <li class="submit animated fadeInUp">
                             <input type="hidden" name="ip" value="46.119.161.18">
-                            <a href="" id="submit-form" class="flat-button submit-form">
+                            <a href="#" id="submit-form" class="flat-button submit-form">
                                 <div>
                                     <span class="bg"></span>
                                     <span class="base"></span>
@@ -218,9 +235,16 @@
 
     </div>
 </div>
-  
-    <script src="main.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="vue.js"></script>
+
+    <script src="./js/parser.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-router@4"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="./js/router-vue.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/preloader.js"></script>
+    
 </body>
 </html>
