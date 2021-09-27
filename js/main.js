@@ -110,17 +110,22 @@ let backtotop = select('.scroll-down')
     onscroll(document, toggleBacktotop)
   }
 
-  const mobileMenu  = document.querySelector('.mobile-munu')
-  const mobileMenuItems  = document.querySelector('.mobile-munu_items')
- 
-  mobileMenu.addEventListener('click', menuMoveing)
-  
-   function menuMoveing() {
-    mobileMenu.classList.toggle('active')
-    if (mobileMenu.classList.contains('active')) {
-      mobileMenuItems.style.display = 'flex'
-    }else{
-      mobileMenuItems.style.display = 'none'
-    }
+   // Parallax
+   
+   document.addEventListener('mousemove', parallax)
+   function parallax(e){
+    
+    let layer = document.querySelector('.layer')
+    let speed = layer.getAttribute('data-speed')
+     layer.style.transform = `translateX(${e.clientX*speed/500}px)`
    }
+
+   // Menu
+
+   let btn = document.querySelector('#btn_menu')
+   let sidebar = document.querySelector('.sidebar')
+   btn.addEventListener('click', () => {
+    sidebar.classList.toggle('active')
+   })
+   
  

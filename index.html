@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/preloader.css">
     <script src="https://kit.fontawesome.com/060703f24d.js" crossorigin="anonymous"></script>
+    <!-- box icons cdn -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="preloader">
@@ -17,10 +19,65 @@
             <span class="line"><span class="into-line"></span></span>
         </div>
     </div>
-    <canvas id="c" class="canv"></canvas>
-    <canvas id="bg" class="canv">
-        <p>Ваш браузер не поддерживает рисование.</p>
-      </canvas>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">Andrew</div>
+            </div>
+            <i class='bx bx-menu-alt-left' id="btn_menu"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                    <i class='bx bx-search-alt-2' ></i>
+                    <input type="text" placeholder="Search...">
+                <!-- <span class="tooltip">Dashboard</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-circle' ></i>
+                    <span class="link_name">User</span>
+                </a>
+                <!-- <span class="tooltip">User</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-message-rounded' ></i>
+                    <span class="link_name">Message</span>
+                </a>
+                <!-- <span class="tooltip">Message</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <!-- <span class="tooltip">Analytics</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-file' ></i>
+                    <span class="link_name">File Manager</span>
+                </a>
+                <!-- <span class="tooltip">File Manager</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart' ></i>
+                    <span class="link_name">Order</span>
+                </a>
+                <!-- <span class="tooltip">Order</span> -->
+            </li>
+          
+        </ul>
+    </div>
+   
     <div id="sound" class="activated"> 
         <i class="fab fa-soundcloud"></i>
               <a href="" class="sound-state" 
@@ -28,53 +85,21 @@
               @click = 'changeState'
               >Sound {{ state }}</a>
     </div>
-    <menu id="menu" class="main-menu">
-        <div class="main-menu__top">
-            <a href="#" class="logo">
-                <img src="img/pngwing.com.svg" alt="logo">
-                <span>Android</span>
-            </a>
-            <span class="under-title">Web Developer</span>
-        </div>
-        <div class="main-menu__nav">
-            <a href="about.html">About</a>    
-            <a href="/myskills">My Skills</a>
-            <a href="/work">Work</a>
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
-        </div>
-        <div class="main-menu__social">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        
-    </menu>
-    <div class="mobile-munu">
-        <span class="mobile-munu_icon">&#10150;</span>
-        <div class="mobile-munu_items">
-            <a href="/about">About</a>    
-            <a href="/myskills">My Skills</a>
-            <a href="/work">Work</a>
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
-        </div>
-     
-    </div>
-  
-
-    <div id="axatifi">
         <div class="page-outer">
     <section id="section-home" class="section-full">
+        <div data-speed="10" class="layer"></div>
         <div class="text-zone">
             <h1>
                <span class="blind">H</span><span class="blind">i</span><span class="blind">,</span><br><span class="blind">I</span><span class="blind">'</span><span class="blind">m</span> <span class="blind">A</span><span class="blind">n</span><span class="blind">d</span><span class="blind">r</span><span class="blind">e</span><span class="blind">w</span><span class="blind">,</span><br><span class="blind">w</span><span class="blind">e</span><span class="blind">b</span> <span class="blind">d</span><span class="blind">e</span><span class="blind">v</span><span class="blind">e</span><span class="blind">l</span><span class="blind">o</span><span class="blind">p</span><span class="blind">e</span><span class="blind">r</span>
             </h1>
             <p class="text-writer"></p>
-            <a class="contact-btn fifth" href="#">Contact me!</a>
+            <a class="flat-button" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Contact me!
+            </a>
         </div>
        
         <div class="scroll-down scroll-down__left">
@@ -92,12 +117,12 @@
                 <div class="my-portfolio_content">
                 <p class="text-writer2"></p>
                 
-                <a rel="work" href="/portfolio/" class="flat-button fifth">
-                    <div>
-                        <span class="bg"></span>
-                        <span class="base"></span>
-                        <span class="text">See more!</span>
-                    </div>
+                <a rel="work" href="/portfolio/" class="flat-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    More info...
                 </a>
             </div>
 
@@ -121,49 +146,14 @@
                    <a href="https://benicostatour.com/"></a>
                 </div>
             </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/01/Adrian-Flux-Motorsport-e1546707189414.jpg);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/ttelo.png);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/ttelo.png);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/08/London-Block-Management-Services-Aspect-Property-Management-1-e1567256441746.jpg);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/01/unnamed.jpg);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/01/Bez-nazwy-2.png);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
-            <li>
-                <div class="my-work_item" style="background-image: url(https://jacekjeznach.com/wp-content/uploads/2019/08/ttelo.png);">
-                   <a href="https://benicostatour.com/"></a>
-                </div>
-            </li>
         </ul>
     </section>
 
     <section id="about" data-load="work" class="section-full section-about js-way" >
+       
         <div class="text-zone">
-            
+                <h2 aria-label="My Portfolio" class="blast-root"><span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">,</span> <span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">y</span><span class="blind" aria-hidden="true" style="opacity: 1;">s</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">l</span><span class="blind" aria-hidden="true" style="opacity: 1;">f</span> <span class="blind" aria-hidden="true" style="opacity: 1;">a</span><span class="blind" aria-hidden="true" style="opacity: 1;">n</span><span class="blind" aria-hidden="true" style="opacity: 1;">d</span> <span class="blind" aria-hidden="true" style="opacity: 1;">I</span></h2>
                 
-                    <h2 aria-label="My Portfolio" class="blast-root"><span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">,</span> <span class="blind" aria-hidden="true" style="opacity: 1;">M</span><span class="blind" aria-hidden="true" style="opacity: 1;">y</span><span class="blind" aria-hidden="true" style="opacity: 1;">s</span><span class="blind" aria-hidden="true" style="opacity: 1;">e</span><span class="blind" aria-hidden="true" style="opacity: 1;">l</span><span class="blind" aria-hidden="true" style="opacity: 1;">f</span> <span class="blind" aria-hidden="true" style="opacity: 1;">a</span><span class="blind" aria-hidden="true" style="opacity: 1;">n</span><span class="blind" aria-hidden="true" style="opacity: 1;">d</span> <span class="blind" aria-hidden="true" style="opacity: 1;">I</span></h2>
                 <div class="my-portfolio_content">
                 <p class="text">I’m a Front-End Developer located in Poland. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
                 <p class="text">Well-organised person, problem solver, independent employee with high attention to detail. Fan of MMA, outdoor activities, TV series and English literature. A family person and father of two fractious boys,</p>
@@ -172,6 +162,7 @@
                 </div>
 
         </div>
+        <div class="my-img"></div>
     </section>
 
     <section id="section-contact" data-load="contact" class="section-contact">
@@ -208,11 +199,11 @@
                         <li class="submit animated fadeInUp">
                             <input type="hidden" name="ip" value="46.119.161.18">
                             <a href="#" id="submit-form" class="flat-button submit-form">
-                                <div>
-                                    <span class="bg"></span>
-                                    <span class="base"></span>
-                                    <span class="text">Send message!</span>
-                                </div>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Submit
                             </a>
                             <input style="display: none" id="submit" type="submit" class="flat-button" value="SEND">
 
@@ -235,64 +226,14 @@
 
 
     </section>
-
-
     </div>
-</div>
+
 
     <script src="./js/main.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./js/vue.js"></script>
     <script src="./js/preloader.js"></script>
-    <script> 
-     //initial
-var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
-    ctx = c.getContext('2d'),
     
-    //parameters
-    total = w,
-    accelleration = .05,
-    
-    //afterinitial calculations
-    size = w/total,
-    occupation = w/total,
-    repaintColor = 'rgba(0, 0, 0, .04)'
-    colors = [],
-    dots = [],
-    dotsVel = [];
-
-//setting the colors' hue
-//and y level for all dots
-var portion = 360/total;
-for(var i = 0; i < total; ++i){
-  colors[i] = portion * i;
-  
-  dots[i] = h;
-  dotsVel[i] = 10;
-}
-
-function anim(){
-  window.requestAnimationFrame(anim);
-  
-  ctx.fillStyle = repaintColor;
-  ctx.fillRect(0, 0, w, h);
-  
-  for(var i = 0; i < total; ++i){
-    var currentY = dots[i] - 1;
-    dots[i] += dotsVel[i] += accelleration;
-    
-    ctx.fillStyle = 'hsl('+ colors[i] + ', 80%, 50%)';
-    ctx.fillRect(occupation * i, currentY, size, dotsVel[i] + 1);
-    
-    if(dots[i] > h && Math.random() < .01){
-      dots[i] = dotsVel[i] = 0;
-    }
-  }
-}
-
-anim();
-    </script>
     
 </body>
 </html>
