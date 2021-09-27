@@ -143,7 +143,33 @@ cursor: pointer;
     width: calc(100% - 240px);
     left: 240px;
 }
+/* .open-menu{
+    display: none;
+} */
 
+
+
+
+@media screen and (max-width: 1000px) {
+    .sidebar{
+        display: none;
+        opacity: 0;
+    }
+
+    /* .open-menu{
+        display: block;
+        position: fixed;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+        left: 5px;
+        color: bisque;
+        z-index: 1;
+    }
+    .open-menu i{
+
+    } */
+}
 
 .container{
     max-width: 1500px;
@@ -219,6 +245,16 @@ cursor: pointer;
     width: calc(100% - 78px);
     left: 78px;
     transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .page-outer {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        transition: all 0.5s ease;
+    }
 }
 
 .text-zone{
@@ -324,7 +360,9 @@ cursor: pointer;
     }
     .text-zone p{
         text-align: start;
+        color: #fff;
         margin-bottom: 20px;
+        font-weight: bold;
 
     }
     .text-zone{
@@ -443,68 +481,113 @@ cursor: pointer;
 }
 
 .my-work{
-   
     background-color: #181818;
 }
 
-.my-work ul {
+.my-work_container{
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.my-work ul li{
-    width: 20%;
+.my-work_container .card{
     position: relative;
-    overflow: hidden;
-    
-}
-
-.my-work_item:nth-child(2){
-    min-height: 210px;
-    background-image: url(https://jacekjeznach.com/wp-content/uploads/2017/10/Bez-nazwy-3-e1508357920340.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.my-work_item:nth-child(-n+3){
-    min-height: 210px;
-    background-image: url(../img/my-works/sokhan.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
 }
 
-.my-work_item:hover{
-    transform: scale(1.1);
+.my-work_container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
 }
 
-@media (max-width: 1160px){
-    .my-work{
-        margin-left: 0px;
+
+
+.my-work_container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.my-work_container .card:hover .face.face1{
+    background: #08fdd8;
+    transform: translateY(0);
+}
+
+
+
+.my-work_container .card .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.my-work_container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.my-work_container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.my-work_container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.my-work_container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.my-work_container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.my-work_container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.my-work_container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .my-work_container{
+        flex-direction: column;
     }
 
-    .my-work_item{
-        min-height: 180px;
+    .my-work_container .card{
+        margin: 0 auto;
+    }
+
+    .my-work_container .card .face{
+        max-width: 270px;
     }
 }
 
-@media (max-width: 900px){
-    .my-work ul li{
-        width: 33%;
-    }
-
-    .my-work ul{
-        justify-content: center;
-    }
-
-
-    .my-work_item{
-        max-height: 240px;
-    }
-}
 
 @media (min-width: 590px){
     .section-full{
@@ -513,16 +596,6 @@ cursor: pointer;
   
 }
 
-@media (max-width: 555px){
-    .my-work ul li {
-        width: 50%;
-    }
-
-    .my-work ul li:last-child{
-        display: block;
-        visibility: visible;
-    }
-}
 
 
 .section-about {
@@ -541,6 +614,7 @@ cursor: pointer;
     background-position: center;
     background-size: contain;
 }
+
 
 
 a.flat-button{
@@ -640,6 +714,17 @@ a.flat-button span:nth-child(4){
     }
 }
 
+@media screen and (max-width: 1000px) {
+    a.flat-button {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        color: #03e9f4;
+        margin-right: 0;
+    }
+}
+
 
 
 .section-about .text-zone p {
@@ -663,8 +748,22 @@ a.flat-button span:nth-child(4){
 }
 
 @media (max-width: 1160px){
+    
+}
+
+@media screen and (max-width: 1000px) {
     .section-about{
         margin: 0;
+        flex-direction: column;
+    }
+
+    .section-about .text-zone{
+        padding: 10px;
+        text-align: center;
+    }
+
+    .section-about .text-zone p{
+     width: 100%;
     }
 }
 
@@ -791,9 +890,9 @@ a.flat-button span:nth-child(4){
     }
 
     .section-contact .contact-map{
-    height: 400px;
+    height: 440px;
     background-repeat: no-repeat;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     background-position: center;
     }
 
@@ -803,6 +902,7 @@ a.flat-button span:nth-child(4){
     .section-contact .text-zone p{
         width: 100%;
         padding: 5px;
+        text-align: center;
     }
 
     .submit {
